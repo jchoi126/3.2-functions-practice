@@ -209,3 +209,15 @@ console.log(filterLongWords('holla at yo boyee, but seriously though.', 3));
 
 function charFreq(string){
     "use strict";
+    var print = {};
+    for(var i = 0; i < string.length ; i++){
+      var char = string[i];
+      if(print[char]){
+        print[char] += 1;
+      } else {
+        print[char] = 1;
+      }
+    }
+    return print;
+}
+console.log(charFreq('aaaaabbbbbddndndndndndn'));
